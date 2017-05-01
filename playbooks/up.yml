@@ -1,0 +1,11 @@
+#    - hosts: web
+#    user: mammoth
+#    tasks:
+    - name: update apt cache
+      become: yes
+      apt: 
+          update_cache: yes
+      tags:
+          - updcache
+        #apt update && apt install nginx-full
+#update_cache: yes

@@ -1,6 +1,26 @@
 ---
-    - name: nginx role
-      hosts: web
-      become: yes
-      roles: 
-          - nginx
+     - hosts: web
+       pre_tasks:
+         - include: up.yml
+       become: yes
+       roles:
+           - nginx
+
+#      hosts: web
+#      become: yes
+#      raw: aptitude update && aptitude safe-upgrade -y 
+#      update_cache: yes 
+          #          name=* state=latest update_cache=yes
+          #      update_cache: yes #upgrade=yes
+#      when: ansible_os_family == "Debian"
+
+##    - name: nginx role
+##     hosts: web
+##      become: yes
+#      raw: aptitude update && aptitude safe-upgrade -y
+#      apt:
+#          update_cache: yes
+#      - include: up.yml
+##      become: yes
+##     roles: 
+##          - nginx
