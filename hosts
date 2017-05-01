@@ -2,7 +2,11 @@
 ;hsrv
 ;localhost
 
+[web]
+hsrv ansible_ssh_host=10.4.44.44
+
+[ws]
 localhost ansible_connection=local
 
-[hsrv]
-10.4.44.44
+#[hsrv]
+#10.4.44.44

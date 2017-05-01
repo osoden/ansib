@@ -1,6 +1,6 @@
 ---
     - name: nginx role
-      hosts: hsrv
+      hosts: web
       become: yes
       roles: 
           - nginx
