@@ -1,0 +1,16 @@
+    - name: Install nginx Debian/Ubuntu
+      become: yes
+      apt: name=nginx-full state=present
+      when: ansible_os_family == "Debian"
+
+    - name: Copy virtualhost config
+      become: yes
+      template: src=default.conf dest=/etc/nginx/conf.d/{{ server_name }}.conf
+
+    - name: Create target directory
+      file: path=/var/www/{{ server_name}} state=directory mode=0755
+
+    - name: Copy index.html
+      become: yes
+      template: src=index.html dest=/var/www/{{ server_name}}/index.html
+      notify: restart nginx
