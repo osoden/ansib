@@ -1,0 +1,8 @@
+;[servers:children]
+;hsrv
+;localhost
+
+localhost ansible_connection=local
+
+[hsrv]
+10.4.44.44
