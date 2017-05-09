@@ -1,11 +1,11 @@
-- hosts: all
+#- hosts: test
 #    user: mammoth
-  tasks:
+#  tasks:
     - name: update apt cache
+      become: yes
       apt: 
           update_cache: yes
       tags:
           - updcache
-      become: yes
         #apt update && apt install nginx-full
 #update_cache: yes

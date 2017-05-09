@@ -2,10 +2,7 @@
 #    user: mammoth
   tasks:
     - name: nginx install
-      become: yes
       apt: name=nginx-full update_cache=yes
+      become: yes
         #apt update && apt install nginx-full
 #update_cache: yes
-#    - name: nginx remove
-#      become: yes
-#      apt: name=nginx-full state=absent

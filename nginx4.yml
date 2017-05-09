@@ -6,7 +6,7 @@
        tasks:
         - name:
           setup:
-          delegate_to: {{item}}
+          delegate_to: "{{item}}"
           with_items: "{{groups[test]}}"
           when: ansible_hostname == "test1" 
 #"{{hostvars[item]['ansible_nodename'] is not defined}}"

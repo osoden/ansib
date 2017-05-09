@@ -11,3 +11,14 @@ localhost ansible_connection=local
 
 [hsrv]
 10.4.44.44
+
+[test:children]
+test1
+test2
+
+[test1]
+10.4.44.72
+
+[test2]
+10.4.44.73
+
