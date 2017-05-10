@@ -1,8 +1,0 @@
-- hosts: hsrv
-#    user: mammoth
-  tasks:
-    - name: nginx install
-      apt: name=nginx-full update_cache=yes
-      become: yes
-        #apt update && apt install nginx-full
-#update_cache: yes
