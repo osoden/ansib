@@ -1,0 +1,12 @@
+- hosts: test1
+  roles:
+      - tmux
+  #  tasks:
+  #  - name: tmux install
+  #    become: yes
+  #    apt: name=nginx-full update_cache=yes
+        #apt update && apt install nginx-full
+#update_cache: yes
+#    - name: nginx remove
+#      become: yes
+#      apt: name=nginx-full state=absent
